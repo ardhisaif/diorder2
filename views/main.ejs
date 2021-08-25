@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="head">
+        <a href="/shopinglist">keranjang</a>
+        <input type="text" placeholder="search"  > <div style="color: white;">.</div>
+        
+    </div>    
+    
+    <div class="wrapper">
+        <% for(let i = 0 ; i < item.length ; i++) {%>
+            <a href="/detail/<%=item[i].id%>">
+                <div class="card" title="<%= item[i].name %> ">
+                    <img src="<%= item[i].image %> " alt="">
+                    <div class="hidden_text">
+                        <p title="<%= item[i.name] %> "><%= item[i].name %> </p>
+                    </div>
+                    <h2><%= formatUang(item[i].price) %> </h2> 
+                </div>
+            </a>
+        <%}%>  
+    </div>
+</body>
+</html>
